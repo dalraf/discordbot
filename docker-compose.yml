@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  
+  botdiscord:
+    build: ./app
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - "./app:/app"
+    working_dir: /app
+    command: python -u start.py
+    networks:
+      - botnet
+
+networks:
+  botnet:
+
