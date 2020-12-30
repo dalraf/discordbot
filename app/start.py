@@ -12,7 +12,7 @@ GUILD = os.getenv('DISCORD_GUILD')
 
 bot = commands.Bot(command_prefix='!')
 
-@bot.command(name='testar', help='Simula ação do jogo: Status  Nível Dificuldade')
+@bot.command(name='testar', help='Simula ação do jogo')
 async def testar(ctx, status: int , nivel: int , dificuldade: int):
     print("Recebendo teste de Status=" + str(status) + ", Nivel=" + str(nivel) + ", Dificuldade=" + str(dificuldade))
     pontos = randrange(20)
