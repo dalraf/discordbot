@@ -1,4 +1,5 @@
-# bot.py
+# -*- coding: utf-8 -*-
+
 import os
 from random import randrange
 
