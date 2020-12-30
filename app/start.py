@@ -20,4 +20,10 @@ async def testar(ctx, status: int , nivel: int , dificuldade: int):
     print("Resultado=" + str(saldo))
     await ctx.send(str(saldo))
 
+async def rolar(ctx):
+    pontos = randrange(20)
+    print("Resultado=" + str(pontos))
+    await ctx.send(str(pontos))
+
+
 bot.run(TOKEN)
