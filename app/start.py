@@ -18,13 +18,13 @@ async def testar(ctx, status: int , nivel: int , dificuldade: int):
     pontos = randrange(20)
     saldo = ((status - pontos ) * nivel) - dificuldade
     print("Resultado=" + str(saldo))
-    await ctx.send(str(saldo))
+    await ctx.send("O resutado da jogada é " + str(saldo))
 
 @bot.command(name='rolar', help='Joga dados d20')
 async def rolar(ctx):
     pontos = randrange(20)
     print("Resultado=" + str(pontos))
-    await ctx.send(str(pontos))
+    await ctx.send("O resutado do dado é " + str(pontos))
 
 
 bot.run(TOKEN)
